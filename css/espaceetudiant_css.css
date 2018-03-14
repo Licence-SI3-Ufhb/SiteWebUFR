@@ -1,0 +1,23 @@
+.libele_info_perso
+{
+	color: red;
+}
+
+#div_float
+{
+	border-bottom: 15px solid rgb(208,187,34);
+	border-left: 7px solid rgb(208,187,34);
+	border-top: solid black;
+	margin: 15px;
+	margin-bottom: 10px;
+	border-radius: 7px 7px 7px 7px;
+	box-shadow: -3px 5px 6px;
+}
+
+#div_float a
+{
+	font-family: serif;
+	font-size: 1em;
+	text-decoration: none;
+	color: rgb(0,62,0);
+}

@@ -1,0 +1,5 @@
+ul[title="parcours"]{
+	list-style-image: url('../files/fonds/liste_pointer_mini.png');
+	text-align: left;
+	text-decoration: none;
+}

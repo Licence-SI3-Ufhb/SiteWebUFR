@@ -1,0 +1,243 @@
+
+
+/*Definition des polices*/
+@font-face
+{
+	font-family: 'BallparkWeiner';
+	src: url('../polices/ballpark.eot');
+	src: url('../polices/ballpark.eot?#iefix') format('embedded-opentype'),
+			url('../polices/ballpark.woff') format('woff'),
+			url('../polices/ballpark.ttf') format('truetype'),
+			url('../polices/ballpark.svg#BallparkWeiner') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face
+{
+	font-family: 'Dayrom';
+	src: url('../polices/dayrom.eot');
+	src: url('../polices/dayrom.eot?#iefix') format('embedded-opentype'),
+			url('../polices/dayrom.ttf') format('truetype'),
+			url('../polices/dayrom.woff') format('woff'),
+			url('../polices/dayrom.svg#Dayrom') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*Elements principaux de la page*/
+
+body{
+	/*background: url('../files/bg04.png') scroll;*/
+	background: rgb(201,211,126);
+}
+
+#page{
+	width: 90%;
+	margin: auto;
+	font-family: sans-serif;
+	font-size: 1.2em;
+	text-align: justify;
+}
+ul a{
+	text-decoration: none;
+	color: white;
+}
+ul{
+	list-style:none;
+}
+
+/*partie header*/
+#header{
+	background: url('../files/fonds/fond_math3.jpg');
+	text-align: left;
+	border-radius: 5px;
+	box-shadow: 3px 3px 3px orange;
+	margin: 0px;
+}
+#logo_ufhb{
+	float: left;
+	box-shadow: 5px 5px silver;
+}
+#logo_irma{
+	float: right;
+}
+.irma{
+	font-size: 2em;
+	color: orange;
+	font-family: Algerian, serif;
+}
+
+nav{
+	clear: both;
+	background: black;
+	color: white;
+	font-size: 1.4em;
+}
+nav ul {
+	display: flex;
+	flex-direction: row;
+}
+#nav_ul li{
+	margin-right: 15px;
+	list-style: none;
+}
+#nav_ul a:hover{
+	border-bottom: 5px solid rgb(231,201,80);
+}
+/*gestion de la maquet*/
+#maquet{
+	font-family: Algerian, Arial, serif;
+	background: rgba(255,148,40,0.5);
+	position: relative;
+	border-radius: 5px;
+	box-shadow: 3px 3px 3px orange;
+	margin: 0px;
+}
+#maquet h2{
+	font-family: "Baskerville Old Face", Algerian, serif;
+	position: bottom;
+}
+
+/*parite section*/
+
+.grand_titre
+{
+	background: rgb(120,235,243);
+	border-top: solid 1px ; 
+	border-right: solid 1px ;
+	border-left: solid 1px ;  
+	border-radius: 10px 10px 0px 0px;
+	color: rgb(50,22,95);
+	font-family: Dayrom;
+	padding: 0px;
+	text-align: center;
+}
+
+.ptit_titre
+{
+	background: rgb(140,225,47);
+	border-top: solid 1px ; 
+	border-right: solid 1px ;
+	border-left: solid 1px ;  
+	border-radius: 10px 10px 0px 0px;
+	color: rgb(113,39,28);
+	font-family: serif;
+	font-size: 1.2em;
+}
+
+h1{
+	/*color: blue;
+	font-size: 1.3em;*/
+	font-size: 1.7em;
+	color: rgb(27,64,2);
+}
+/*strong{
+	color: rgb(0,0,206);
+	text-align: left;
+}*/
+#main_section{
+	background: rgb(196,189,113);
+	display: inline-block;
+	width: 70%;
+	vertical-align: top;
+	border: 1px solid black;
+	padding: 7px;
+	border-radius: 5px;
+	font-size: 1.2em;
+}
+#main_section, #infos{
+	display: inline-block;
+	vertical-align: top;
+	box-shadow: 5px 5px 6px black;
+}
+/*
+#texte_zone{
+	
+	width: 95%;
+}*/
+
+#infos{
+	display: inline-block;
+	width: 25%;
+	padding: 5px;
+	border: 1px solid black;
+	border-radius: 5px;
+	margin-left: 15px;
+
+}
+#separateur
+{
+	width: 95%;
+	background: rgb(66,255,114);
+	margin: 7px;
+	border: 5px dashed rgb(84,58,24);
+	border-radius: 5px;
+}
+
+#aside_infos,#aside_associations
+{
+	margin:7px;
+	border-radius: 7px 7px 0px 0px;
+	max-height: 500px;
+	overflow: auto;
+	scroll-behavior:auto;
+}
+
+/*parier footer*/
+#footer{
+	margin-top: 20px;
+	display: flex;
+	flex-direction: row;
+	background: black fixed;
+	color: white;
+}
+#footer div{
+	margin: 10px;
+}
+.footer_ul li:hover{
+	text-decoration: underline;
+}
+
+
+/*Slider*/
+.slider
+{
+	/*width: 100%;*/
+	overflow: hidden;
+	
+}
+.slides
+{
+	width: calc(1000px * 5);
+	animation: glisse 10s infinite;
+}
+.slide
+{
+	float: left;
+}
+@keyframes glisse
+{
+	0%
+	{
+		transform: translateX(0); 
+	}
+	25%
+	{
+		transform: translateX(-850px); 
+	}
+	50%
+	{
+		transform: translateX(-1700px); /*1700*/
+	}
+	75%
+	{
+		transform: translateX(-2550px); /*2550*/
+	}
+	100%
+	{
+		transform: translateX(-850px); /*1700*/
+	}
+}
+
+/*Fin slider*/

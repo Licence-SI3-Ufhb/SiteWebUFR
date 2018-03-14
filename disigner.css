@@ -1,0 +1,194 @@
+body
+{
+	background: url('images/fond_jaune.png');
+font-family: 'Trebuchet MS', Arial, sans-serif;
+color: #181818;margin-left: 63px;
+
+}
+#bloc_de_page
+{
+width: 900px;
+margin: auto;
+}
+#banniere_image
+{
+margin-top: 2px;
+height: 200px; width:850px; 
+border-radius: 5px;
+/*background: url('images/banniere.jpg') no-repeat;*/
+position: relative;
+box-shadow: 0px 4px 4px #1c1a19;
+margin-bottom: 15px;
+}
+#logo
+{
+	padding-top: 19px;width: 264px;height: 214.031;
+}
+#conteneur
+{
+    display:flex;
+    justify-content:center;
+} 
+#conteneur1
+{
+    display:flex;
+    flex-direction:column;
+
+}
+nav
+{
+	display: inline-block;
+	width: 1000px;
+}
+#menu, #menu ul
+{
+padding : 0; /* pas de marge intérieure */
+margin : 0; /* ni extérieure */
+list-style : none; /* on supprime le style par défaut de la
+liste */
+line-height : 21px; /* on définit une hauteur pour chaque
+élément */
+text-align : center; /* on centre le texte qui se trouve
+dans la liste */
+}
+#menu a /* Contenu des listes */
+{
+display : block; /* on change le type d'élément, les liens
+deviennent des balises de type block */
+padding : 0; /* aucune marge intérieure */
+opacity: 0.6;
+/*background : #181818; /* couleur de fond */
+color : #181818; /* couleur du texte */
+text-decoration : none; /* on supprime le style par défaut
+des liens (la plupart du temps = souligné) */
+width : 144px; /* largeur */
+}
+#menu li /* Elements des listes */
+{
+float : left;
+/* pour IE qui ne reconnaît pas "transparent" */
+border-right : 1px solid #fff; /* on met une bordure
+blanche à droite de chaque élément */
+}
+/**************************************************************************/
+/**************************************************************************/
+/* IE ne reconnaissant pas le sélecteur ">" */
+
+html>body #menu li
+{
+border-right: 1px solid transparent ; /* on met une bordure
+transparente à droite de chaque élément */
+}
+#menu li ul /* Sous-listes */
+{
+position: absolute; /* Position absolue */
+width: 144px; /* Largeur des sous-listes */
+left: -999em; /* Hop, on envoie loin du champ de vision */
+}
+#menu li ul li /* Éléments de sous-listes */
+{
+/* pour IE qui ne reconnaît pas "transparent" (comme
+précédemment) */
+border-top : 1px solid #fff; /* on met une bordure blanche
+en haut de chaque élément d'une sous liste */
+}
+/* IE ne reconnaissant pas le sélecteur ">" */
+html>body #menu li ul li
+{
+border-top : 1px solid transparent; /* on met une bordure
+transparente en haut de chaque élément */
+}
+#menu li ul ul
+{
+margin : -22px 0 0 144px ; /* On décale les sous-souslistes
+pour qu'elles ne soient pas au dessus des sous-listes */
+/* pour IE qui ne reconnaît pas "transparent" (comme
+précédemment) */
+border-left : 1px solid #fff ; /* Petite bordure à
+gauche pour ne pas coller ... */
+}
+/* IE ne reconnaissant pas le sélecteur ">" ... je me répète ;-) */
+html>body #menu li ul ul
+{
+border-left : 1px solid transparent ; /* on met une
+bordure transparente sur la gauche de chaque élément */
+}
+#menu a:hover /* Lorsque la souris passe sur un des liens */
+{
+	/*text-decoration: underline;
+color: green;*/
+color: #760001;
+border-bottom: 3px solid #760001;
+/*color: #000; /* On passe le texte en noir... */
+/*background: #fff; /* ... et au contraire, le fond en blanc
+*/
+}
+#menu li:hover ul ul, #menu li.sfhover ul ul /* Sous-sous-listes
+lorsque la souris passe sur un élément de liste */
+{
+left: -999em; /* On expédie les sous-sous-listes hors dun
+champ de vision */
+}
+#menu li:hover ul, #menu li li:hover ul, #menu li.sfhover ul, #menu
+li li.sfhover ul /* Sous-listes lorsque la souris passe sur un
+élément de liste ET sous-sous-lites lorsque la souris passe sur un
+élément de sous-liste */
+{
+left: auto; /* Repositionnement normal */
+min-height: 0; /* Corrige un bug sous IE */
+}
+/*///////////////////////////////////////////////////////////////////////////////*/
+/*********************************ASSIDE CSS********************************/
+aside
+{
+position: absolute;
+left: 817px; margin-top: 368px; 
+width: 235px;
+width: 235px;
+margin-top: 45px;
+/*opacity: 0.6px;*/
+/*background-color: black;*/
+box-shadow: 0px 2px 5px black;
+border-radius: 5px;
+padding: 10px;
+/*color: white;*/
+font-size: 0.9em;
+}
+aside h1
+{
+    text-align: center;
+}
+/*///////////////////////////////////////////////////////////////////////////////*/
+
+/******************************ARTICLE CSS*************************************/
+/*/////////////////////////////////////////////////////////////////////////////*/
+article p, article ul
+{
+width: 512px;
+box-shadow: 0px 2px 5px black;
+border-radius: 5px;
+text-align: justify;
+padding: 12px;
+}
+.doyen_flottant
+{
+	margin-right: 10px;
+	float: left;
+}
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/******************************************FOOTER CSS***********************************************************/
+footer 
+{
+    background: url('images/separateur.png') repeat-x top;
+
+}
+.element
+{
+	display: inline-block;
+    vertical-align: top;
+}
+#ad1, #ad2,#ad3
+{
+	display: inline-block;
+	vertical-align: top;
+}
