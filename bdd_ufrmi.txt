@@ -1,0 +1,169 @@
+-- phpMyAdmin SQL Dump
+-- version 3.2.0.1
+-- http://www.phpmyadmin.net
+--
+-- Serveur: localhost
+-- Généré le : Lun 12 Mars 2018 à 10:53
+-- Version du serveur: 5.1.72
+-- Version de PHP: 5.3.0
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Base de données: `ufrmi`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `classe`
+--
+
+CREATE TABLE IF NOT EXISTS `classe` (
+  `Nom` varchar(50) NOT NULL,
+  `Niveau` int(11) NOT NULL,
+  PRIMARY KEY (`Nom`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `classe`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `ecue`
+--
+
+CREATE TABLE IF NOT EXISTS `ecue` (
+  `Nom` varchar(50) NOT NULL,
+  `NomUE` varchar(50) NOT NULL,
+  `Path` text NOT NULL,
+  PRIMARY KEY (`Nom`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `ecue`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `etudiants`
+--
+
+CREATE TABLE IF NOT EXISTS `etudiants` (
+  `Matricule` varchar(15) NOT NULL,
+  `Nom` varchar(15) DEFAULT NULL,
+  `Prenoms` varchar(30) DEFAULT NULL,
+  `Pseudo` varchar(20) DEFAULT NULL,
+  `Niveau` int(11) DEFAULT NULL,
+  `Filiere` varchar(50) NOT NULL,
+  `Contacts` varchar(100) DEFAULT NULL,
+  `Mdp` text NOT NULL,
+  PRIMARY KEY (`Matricule`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `etudiants`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `filieres`
+--
+
+CREATE TABLE IF NOT EXISTS `filieres` (
+  `Nom` varchar(100) NOT NULL,
+  `Grade` int(11) NOT NULL,
+  `Classe` varchar(50) NOT NULL,
+  PRIMARY KEY (`Nom`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `filieres`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `personnel`
+--
+
+CREATE TABLE IF NOT EXISTS `personnel` (
+  `Matricule` varchar(20) NOT NULL,
+  `Nom` varchar(20) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `Prenoms` varchar(30) DEFAULT NULL,
+  `Contacts` varchar(100) DEFAULT NULL,
+  `Titre` varchar(50) NOT NULL,
+  `Bureau` varchar(30) NOT NULL,
+  `Role` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `PathImg` text NOT NULL,
+  PRIMARY KEY (`Matricule`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `personnel`
+--
+
+INSERT INTO `personnel` (`Matricule`, `Nom`, `Prenoms`, `Contacts`, `Titre`, `Bureau`, `Role`, `PathImg`) VALUES
+('1', 'Adje', 'Assohoun', 'adje@gmail.com', 'Doyen', '12', 'Charger de la supervisation de la bonnne marche des affaires de l''UFR', 'images/doyen.jpg'),
+('2', 'Monsan', 'Vincent', 'vincent@gmail.com', 'Vice-Doyen : Pédagogie', '10', 'Gère les affaires liées à  la formation', 'images/anonyme.jpg'),
+('3', 'Nzi', 'Yao Modeste Koffi', 'yao@gmail.com', 'Vice-Doyen : Recherche', '11', 'Se charge des affaires de recherche ainsi que la gestion des laboratoires', 'images/anonyme.jpg'),
+('4', 'Brou', 'Patrice', 'patrice@gmail.com', 'Prof Informatique', '15', 'Enseigne : Programmation, Bases de données,Atelier Maintenance', 'images/brou_patrice.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `pj`
+--
+
+CREATE TABLE IF NOT EXISTS `pj` (
+  `Type` int(11) NOT NULL,
+  `Path` text NOT NULL,
+  `Filiere` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `pj`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `postes`
+--
+
+CREATE TABLE IF NOT EXISTS `postes` (
+  `Domaine` int(11) NOT NULL DEFAULT '1' COMMENT '0=admin,1=prof',
+  `Fonction` varchar(100) NOT NULL,
+  `Bureau` varchar(20) NOT NULL,
+  `MatriculPers` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `postes`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `ue`
+--
+
+CREATE TABLE IF NOT EXISTS `ue` (
+  `Nom` varchar(50) NOT NULL,
+  PRIMARY KEY (`Nom`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `ue`
+--
+
